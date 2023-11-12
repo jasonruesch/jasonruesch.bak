@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  jasonruesch:
+    extends:
+      file: docker-compose.yml
+      service: jasonruesch
+    image: jasonruesch/jasonruesch:latest
+    container_name: jasonruesch
+    build:
+      dockerfile: Dockerfile.dev
+    ports:
+      - '4200:4200'
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true # To fix an issue with HMR on Windows machines

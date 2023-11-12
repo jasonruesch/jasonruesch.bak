@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  jasonruesch:
+    extends:
+      file: docker-compose.yml
+      service: jasonruesch
+    image: jasonruesch/jasonruesch:latest
+    container_name: jasonruesch
+    build:
+      dockerfile: Dockerfile.prod
+    ports:
+      - '8080:80'
