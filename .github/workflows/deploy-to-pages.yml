@@ -3,9 +3,8 @@
 name: Deploy site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ['main']
+  release:
+    types: [created]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -48,7 +47,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npx --no-install nx build jasonruesch
+        run: npx nx build jasonruesch
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

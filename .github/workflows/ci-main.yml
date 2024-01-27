@@ -1,0 +1,31 @@
+name: Main CI
+
+on:
+  push:
+    branches: ['main']
+
+  workflow_dispatch:
+
+concurrency:
+  group: 'main'
+  cancel-in-progress: true
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-
+      - run: npm ci
+      - uses: nrwl/nx-set-shas@v3
+      - run: npx nx-cloud record -- nx format:check --all
+      - run: npx nx affected -t lint,test,build --parallel=3
