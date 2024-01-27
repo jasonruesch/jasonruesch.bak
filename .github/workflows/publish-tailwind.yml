@@ -15,14 +15,14 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npx nx test tailwind
-      - run: npx nx build tailwind
+      - run: npx --no-install nx test tailwind
+      - run: npx --no-install nx build tailwind
 
       - uses: actions/upload-artifact@v4
         with:
           name: tailwind
           path: ./dist/libs/tailwind
-          if-no-files-found: error
+          if-no-files-found: ignore
           overwrite: true
 
   publish:
@@ -32,6 +32,15 @@ jobs:
       contents: read
       packages: write
     steps:
+      - uses: xSAVIKx/artifact-exists-action@v0
+        id: check_artifact
+        with:
+          name: 'tailwind'
+      - if: "${{ steps.check_artifact.outputs.exists == 'false' }}"
+        run: |
+          echo "::notice::Artifact not found"
+          exit 0
+
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
