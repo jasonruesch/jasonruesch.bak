@@ -1,10 +1,10 @@
-# This workflow will run build, then publish a package to GitHub Packages when a release is created
+# This workflow will run build, then publish a package to GitHub Packages when a tag is pushed
 
 name: Publish Tailwind Package
 
 on:
-  release:
-    types: [created]
+  push:
+    tags: ['tailwind-v*']
 
 jobs:
   build:
