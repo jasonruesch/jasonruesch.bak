@@ -16,6 +16,7 @@
 }
 
 .animate-bg-gradient {
-  animation: gradient 10s ease infinite;
+  /* animation: gradient 10s ease infinite; */
   background-size: 150% 150%;
+  background-position: 0% 0%;
 }
