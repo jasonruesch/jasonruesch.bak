@@ -54,7 +54,7 @@ export const tailwindPreset = {
         strict: true,
         produceThemeClass: (themeName) => `theme-${themeName}`,
         produceThemeVariant: (themeName) => `theme-${themeName}`,
-      }
+      },
     ),
     plugin(({ addBase, addComponents }) => {
       addBase(headings);
