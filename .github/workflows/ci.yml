@@ -1,20 +1,29 @@
-name: Main CI
+name: CI
 
 on:
   push:
+    branches: ['main']
+  pull_request:
     branches: ['main']
 
   workflow_dispatch:
 
 concurrency:
-  group: 'main'
+  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
+
+# Needed for nx-set-shas when run on the main branch
+permissions:
+  actions: read
+  contents: read
 
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -27,5 +36,9 @@ jobs:
             ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-
       - run: npm ci
       - uses: nrwl/nx-set-shas@v3
-      - run: npx nx-cloud record -- nx format:check --all
+      # This line is needed for nx affected to work when CI is running on a PR
+      - run: git branch --track main origin/main
+
+      - run: npx nx build tailwind
+      - run: npx nx-cloud record -- nx format:check
       - run: npx nx affected -t lint,test,build --parallel=3
