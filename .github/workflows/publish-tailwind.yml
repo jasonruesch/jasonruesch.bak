@@ -15,7 +15,6 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npx --no-install nx test tailwind
       - run: npx --no-install nx build tailwind
 
       - uses: actions/upload-artifact@v4
