@@ -7,7 +7,12 @@ export function App() {
         <div className="flex flex-1 flex-col items-center justify-center">
           <h1
             className={clsx(
-              'animate-bg-gradient bg-gradient-to-br from-primary-500 from-15% via-secondary-500 to-primary-500 to-45% bg-clip-text py-4 text-center text-xl font-normal uppercase !leading-cap text-transparent sm:text-5xl lg:max-w-screen-lg lg:text-6xl dark:from-primary-400 dark:via-secondary-400 dark:to-primary-400',
+              'py-4 text-center text-xl font-normal uppercase !leading-cap sm:text-5xl lg:max-w-screen-lg lg:text-6xl',
+              'bg-gradient-to-br from-primary-500 via-secondary-500 to-primary-500 dark:from-primary-400 dark:via-secondary-400 dark:to-primary-400',
+              'from-45% to-55%',
+              'bg-center',
+              'animate-bg-gradient',
+              'bg-clip-text text-transparent',
             )}
           >
             <div className="flex items-center justify-center">
