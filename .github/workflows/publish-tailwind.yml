@@ -15,7 +15,15 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm test
+      - run: npx nx test tailwind
+      - run: npx nx build tailwind
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tailwind
+          path: ./dist/libs/tailwind
+          if-no-files-found: error
+          overwrite: true
 
   publish:
     needs: build
@@ -30,7 +38,12 @@ jobs:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npx nx build tailwind
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: tailwind
+          path: ./dist/libs/tailwind
+
       - run: npm publish
         working-directory: dist/libs/tailwind
         env:
