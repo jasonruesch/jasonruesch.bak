@@ -1,6 +1,6 @@
 {
   "name": "@jasonruesch/tailwind",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Custom Tailwind CSS configuration",
   "main": "./index.js",
   "types": "./index.d.ts",
