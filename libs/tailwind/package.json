@@ -1,6 +1,7 @@
 {
   "name": "@jasonruesch/tailwind",
   "version": "0.0.1",
+  "description": "Custom Tailwind CSS configuration",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
@@ -8,5 +9,21 @@
       "import": "./index.mjs",
       "require": "./index.js"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonruesch/jasonruesch.git",
+    "directory": "libs/tailwind"
+  },
+  "keywords": [
+    "tailwind",
+    "css",
+    "config"
+  ],
+  "author": {
+    "name": "Jason Ruesch"
   }
 }
