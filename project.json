@@ -22,6 +22,7 @@
     },
     "serve": {
       "executor": "@nx/vite:dev-server",
+      "dependsOn": ["^build"],
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "jasonruesch:build"

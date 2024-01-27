@@ -14,7 +14,8 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/tailwind"
+        "outputPath": "dist/libs/tailwind",
+        "emptyOutDir": true
       },
       "configurations": {
         "development": {
