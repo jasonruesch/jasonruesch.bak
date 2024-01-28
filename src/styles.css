@@ -2,26 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 /* You can add global styles to this file, and also import other style files */
-
-@keyframes gradient {
-  0% {
-    background-position: 50% 50%;
-  }
-  25% {
-    background-position: 70% 70%;
-  }
-  50% {
-    background-position: 50% 50%;
-  }
-  75% {
-    background-position: 30% 30%;
-  }
-  100% {
-    background-position: 50% 50%;
-  }
-}
-
-.animate-bg-gradient {
-  animation: gradient 15s linear infinite;
-  background-size: 300% 300%;
-}
