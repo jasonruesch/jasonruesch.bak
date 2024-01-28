@@ -1,6 +1,6 @@
-# This workflow will build and deploy a site to GitHub Pages when a tag is pushed
+# This workflow will build and deploy a site to another repo when a tag is pushed
 
-name: Deploy site to Pages
+name: Deploy site to Production
 
 on:
   push:
@@ -9,16 +9,13 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: 'pages'
+  group: 'production'
   cancel-in-progress: false
 
 jobs:
