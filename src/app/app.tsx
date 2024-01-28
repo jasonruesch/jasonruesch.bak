@@ -10,7 +10,6 @@ export function App() {
               'py-4 text-center text-xl font-normal uppercase !leading-cap sm:text-5xl lg:max-w-screen-lg lg:text-6xl',
               'bg-gradient-500 dark:bg-gradient-400',
               'bg-300%',
-              'bg-center',
               'animate-gradient',
               'bg-clip-text text-transparent',
             )}
