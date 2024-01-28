@@ -7,7 +7,13 @@
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/tailwind/**/*.ts",
+          "libs/tailwind/package.json"
+        ]
+      }
     },
     "build": {
       "executor": "@nx/vite:build",

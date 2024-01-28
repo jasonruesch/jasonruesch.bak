@@ -8,7 +8,7 @@ export function App() {
           <h1
             className={clsx(
               'py-4 text-center text-xl font-normal uppercase !leading-cap sm:text-5xl lg:max-w-screen-lg lg:text-6xl',
-              'bg-gradient-500 dark:bg-gradient-400',
+              'bg-gradient-500-sm dark:bg-gradient-400-sm md:bg-gradient-500 dark:md:bg-gradient-400',
               'bg-300%',
               'animate-gradient',
               'bg-clip-text text-transparent',

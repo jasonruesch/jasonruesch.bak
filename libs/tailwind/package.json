@@ -1,6 +1,6 @@
 {
   "name": "@jasonruesch/tailwind",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Custom Tailwind CSS configuration",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -25,5 +25,11 @@
   ],
   "author": {
     "name": "Jason Ruesch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.1",
+    "@tailwindcss/forms": "^0.5.7",
+    "tw-colors": "^3.3.1",
+    "tailwindcss-safe-area": "^0.4.1"
   }
 }

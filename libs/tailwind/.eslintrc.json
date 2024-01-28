@@ -13,6 +13,24 @@
     {
       "files": ["*.js", "*.jsx"],
       "rules": {}
+    },
+    {
+      "files": ["*.json"],
+      "parser": "jsonc-eslint-parser",
+      "rules": {
+        "@nx/dependency-checks": [
+          "error",
+          {
+            "ignoredDependencies": [
+              "vite",
+              "@nx/vite",
+              "@vitejs/plugin-react",
+              "vite-plugin-dts"
+            ],
+            "ignoredFiles": ["vite.config.ts"]
+          }
+        ]
+      }
     }
   ]
 }
