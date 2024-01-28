@@ -12,6 +12,7 @@ export function App() {
               'bg-300%',
               'animate-gradient',
               'bg-clip-text text-transparent',
+              'scale-110 sm:scale-100',
             )}
           >
             <div className="flex items-center justify-center">

@@ -35,10 +35,10 @@ jobs:
         id: check_artifact
         with:
           name: 'tailwind'
-      - if: "${{ steps.check_artifact.outputs.exists == 'false' }}"
-        run: |
+      - run: |
           echo "::notice::Artifact not found"
           exit 0
+        if: "${{ steps.check_artifact.outputs.exists == 'false' }}"
 
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
