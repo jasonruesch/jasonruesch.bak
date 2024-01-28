@@ -1,6 +1,6 @@
 # This workflow will build and deploy a site to another repo when a tag is pushed
 
-name: Deploy site to Production
+name: Deploy site to Staging
 
 on:
   push:

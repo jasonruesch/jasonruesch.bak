@@ -1,15 +1,13 @@
-name: CI
+name: Pull Request CI
 
 on:
-  push:
-    branches: ['main']
   pull_request:
     branches: ['main']
 
   workflow_dispatch:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.ref }}
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 # Needed for nx-set-shas when run on the main branch
@@ -38,7 +36,6 @@ jobs:
       - uses: nrwl/nx-set-shas@v3
       # This line is needed for nx affected to work when CI is running on a PR
       - run: git branch --track main origin/main
-        if: github.event_name == 'pull_request'
 
       # This line is needed for nx format:check to check the correct files
       - run: npx nx build tailwind
