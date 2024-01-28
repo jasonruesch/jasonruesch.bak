@@ -10,7 +10,9 @@ on:
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Needed for nx-set-shas when run on the main branch
 permissions:
+  actions: read
   contents: read
   pages: write
   id-token: write
@@ -46,8 +48,18 @@ jobs:
             ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-
       - name: Install dependencies
         run: npm ci
+      - name: Set SHAs
+        uses: nrwl/nx-set-shas@v3
+      # This line is needed for nx format:check to check the correct files
+      - name: Build Tailwind
+        run: npx nx build tailwind
+      - name: Check formatting
+        run: npx nx-cloud record -- nx format:check
       - name: Build
-        run: npx nx build jasonruesch --skip-nx-cache
+        run: |
+          npx nx affected -t lint,test --parallel=3
+          npx nx affected -t build --exclude=jasonruesch --parallel=3
+          npx nx build jasonruesch --skip-nx-cache
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
