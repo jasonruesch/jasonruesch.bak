@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npx nx build tailwind
+      - run: npx nx build tailwind --skip-nx-cache
 
       - uses: actions/upload-artifact@v4
         with:

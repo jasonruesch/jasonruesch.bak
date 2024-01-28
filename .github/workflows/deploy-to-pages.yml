@@ -47,7 +47,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npx nx build jasonruesch
+        run: npx nx build jasonruesch --skip-nx-cache
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
