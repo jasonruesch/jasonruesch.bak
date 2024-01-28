@@ -46,6 +46,14 @@ jobs:
         run: npm ci
       - name: Build
         run: npx nx build jasonruesch --skip-nx-cache
+
+  deploy:
+    environment:
+      name: production
+      url: https://jasonruesch.github.io
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
       - uses: cpina/github-action-push-to-another-repository@ssh-deploy-key
         env:
           SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
