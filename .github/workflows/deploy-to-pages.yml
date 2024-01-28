@@ -62,5 +62,5 @@ jobs:
           destination-github-username: 'jasonruesch'
           destination-repository-name: 'jasonruesch.github.io'
           user-email: jason.ruesch@me.com
-          commit-message: 'chore(release): $GITHUB_REF_NAME'
+          commit-message: 'chore(release): ${GITHUB_REF#refs/*/}'
           target-branch: main
