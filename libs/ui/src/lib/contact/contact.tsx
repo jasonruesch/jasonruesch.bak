@@ -1,4 +1,12 @@
 export function Contact() {
+  // TODO: Figure out why env doesn't exist in the import.meta type like it should
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const emailRecipient = (import.meta as any).env.VITE_CONTACT_EMAIL;
+
+  const handleSendEmail = () => {
+    window.location.href = `mailto:${emailRecipient}`;
+  };
+
   return (
     <div className="flex flex-1 flex-col items-center justify-center gap-4">
       <h1 className="gradient-heading">
@@ -15,12 +23,9 @@ export function Contact() {
         share recommendations for must-watch shows, or exchange thoughts on the
         latest gaming adventures. Let's explore the digital world together!
       </p>
-      <a
-        href="mailto:jason.ruesch@me.com"
-        className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500"
-      >
-        jason.ruesch@me.com
-      </a>
+      <button type="button" className="btn-primary" onClick={handleSendEmail}>
+        Send me an email
+      </button>
     </div>
   );
 }
