@@ -1,7 +1,5 @@
 export function Contact() {
-  // TODO: Figure out why env doesn't exist in the import.meta type like it should
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const emailRecipient = (import.meta as any).env.VITE_CONTACT_EMAIL;
+  const emailRecipient = 'Jason Ruesch <jason.ruesch@me.com>';
 
   const handleSendEmail = () => {
     window.location.href = `mailto:${emailRecipient}`;
