@@ -49,16 +49,16 @@ export function Layout() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
-      <footer className="flex items-center justify-center py-4 px-safe-offset-4 lg:px-safe-offset-8">
+      <footer className="flex flex-col items-center justify-center gap-1 py-4 px-safe-offset-4 sm:flex-row lg:px-safe-offset-8">
         <p className="text-center text-sm text-neutral-400 dark:text-neutral-300">
-          &copy; {new Date().getFullYear()} Jason Ruesch. All rights reserved.{' '}
-          <Link
-            to="/privacy"
-            className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500"
-          >
-            Privacy Policy
-          </Link>
+          &copy; {new Date().getFullYear()} Jason Ruesch. All rights reserved.
         </p>
+        <Link
+          to="/privacy"
+          className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500"
+        >
+          Privacy Policy
+        </Link>
       </footer>
     </div>
   );
