@@ -22,7 +22,7 @@ export function Home() {
           </span>
         </div>
       </h1>
-      <p className="max-w-lg text-center text-base text-neutral-500 sm:max-w-screen-sm sm:text-xl lg:max-w-screen-lg lg:text-2xl dark:text-neutral-400">
+      <p className="max-w-lg text-center text-neutral-500 sm:max-w-screen-sm sm:text-xl lg:max-w-screen-lg lg:text-2xl dark:text-neutral-400">
         This is where I share my passion for creating exceptional user
         experiences through web development. Whether you're here for code,
         collaboration, or just to connect, I'm thrilled to have you.

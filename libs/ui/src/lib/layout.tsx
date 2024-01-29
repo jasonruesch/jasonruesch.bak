@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+import { useEffect, useState } from 'react';
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
 import { Logo, Nav } from '../components';
 import About from './about/about';
@@ -6,9 +8,30 @@ import Home from './home/home';
 import Privacy from './privacy/privacy';
 
 export function Layout() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.scrollY;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="flex min-h-dvh flex-col py-safe">
-      <header className="flex h-14 items-center px-safe-offset-4 lg:h-16 lg:px-safe-offset-8">
+      <header
+        className={clsx(
+          'fixed inset-x-0 z-20 flex h-14 items-center transition-shadow px-safe-offset-4 lg:h-16 lg:px-safe-offset-8',
+          scrollPosition > 0
+            ? 'bg-neutral-50 shadow-sm dark:bg-neutral-900 dark:shadow-black'
+            : 'bg-transparent',
+        )}
+      >
         <div className="flex-1">
           <Link to="/" aria-hidden="true">
             <Logo className="h-8 w-8" />
@@ -17,7 +40,7 @@ export function Layout() {
 
         <Nav className="flex-1" />
       </header>
-      <main className="flex flex-1 flex-col py-4 px-safe-offset-4 lg:px-safe-offset-8">
+      <main className="mt-14 flex flex-1 flex-col py-4 px-safe-offset-4 lg:mt-16 lg:px-safe-offset-8">
         <Routes>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
@@ -27,7 +50,7 @@ export function Layout() {
         </Routes>
       </main>
       <footer className="flex items-center justify-center py-4 px-safe-offset-4 lg:px-safe-offset-8">
-        <p className="text-neutral-400 dark:text-neutral-300">
+        <p className="text-center text-sm text-neutral-400 dark:text-neutral-300">
           &copy; {new Date().getFullYear()} Jason Ruesch. All rights reserved.{' '}
           <Link
             to="/privacy"
