@@ -60,5 +60,8 @@
     "vite": "^5.0.0",
     "vite-plugin-dts": "~2.3.0",
     "vitest": "~0.34.6"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
   }
 }
