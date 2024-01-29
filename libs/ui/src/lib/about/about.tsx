@@ -4,9 +4,14 @@ export function About() {
       <h1 className="gradient-heading">About Me</h1>
       <div className="max-w-lg text-justify sm:max-w-screen-sm lg:max-w-screen-lg">
         <img
-          src="/images/jasonruesch-512.png"
+          src="/images/jasonruesch-light-512.png"
           alt="Jason Ruesch"
-          className="float-right mb-4 ml-4 h-48 w-48 rounded-lg shadow-lg sm:h-64 sm:w-64 lg:h-96 lg:w-96 dark:shadow-black"
+          className="float-right mb-2 ml-4 mt-4 h-48 w-48 rounded-full shadow-lg sm:h-64 sm:w-64 lg:h-96 lg:w-96 dark:hidden dark:shadow-black [&]:[shape-outside:circle()]"
+        />
+        <img
+          src="/images/jasonruesch-dark-512.png"
+          alt="Jason Ruesch"
+          className="float-right mb-2 ml-4 mt-4 hidden h-48 w-48 rounded-full shadow-lg sm:h-64 sm:w-64 lg:h-96 lg:w-96 dark:block dark:shadow-black [&]:[shape-outside:circle()]"
         />
         <p className="mb-4 text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
           I hold a Bachelor of Science in Computer Science and have dedicated my
