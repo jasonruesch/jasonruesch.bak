@@ -54,5 +54,13 @@
     }
   },
   "defaultProject": "jasonruesch",
-  "nxCloudAccessToken": "ODllZGQ4ZDItNTZlYy00ODkzLWFmZjYtNzgxZTg4MTE1NmJmfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "ODllZGQ4ZDItNTZlYy00ODkzLWFmZjYtNzgxZTg4MTE1NmJmfHJlYWQtd3JpdGU=",
+  "release": {
+    "projects": ["jasonruesch", "tailwind"],
+    "projectsRelationship": "independent",
+    "version": {
+      "conventionalCommits": true
+    },
+    "releaseTagPattern": "{projectName}-v{version}"
+  }
 }
