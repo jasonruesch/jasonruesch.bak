@@ -78,9 +78,11 @@ export function Privacy() {
 
   return (
     <div className="flex flex-1 flex-col justify-center gap-4">
-      <h1 className="gradient-heading mx-auto">Privacy Policy</h1>
+      <h1 className="gradient-heading mx-auto">
+        <span className="heading-lg">Privacy Policy</span>
+      </h1>
       <small>Last updated July 01, 2022</small>
-      <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+      <p>
         This privacy notice for Jason Ruesch (&quot;Company,&quot;
         &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), describes how and
         why we might collect, store, use, and/or share (&quot;process&quot;)
@@ -109,7 +111,7 @@ export function Privacy() {
           or events
         </li>
       </ul>
-      <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+      <p>
         Questions or concerns? Reading this privacy notice will help you
         understand your privacy rights and choices. If you do not agree with our
         policies and practices, please do not use our Services. If you still
@@ -125,7 +127,7 @@ export function Privacy() {
         <h2 className="text-xl font-medium sm:text-3xl">
           Summary Of Key Points
         </h2>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           <em>
             This summary provides key points from our privacy notice, but you
             can find out more details about any of these topics by clicking the
@@ -140,7 +142,7 @@ export function Privacy() {
             </a>
           </em>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           What personal information do we process? When you visit, use, or
           navigate our Services, we may process personal information depending
           on how you interact with Jason Ruesch and the Services, the choices
@@ -153,15 +155,15 @@ export function Privacy() {
             Click here to learn more.
           </a>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           Do we process any sensitive personal information? We do not process
           sensitive personal information.
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           Do we receive any information from third parties? We do not receive
           any information from third parties.
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           How do we process your information? We process your information to
           provide, improve, and administer our Services, communicate with you,
           for security and fraud prevention, and to comply with law. We may also
@@ -176,7 +178,7 @@ export function Privacy() {
             Click here to learn more.
           </a>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           In what situations and with which parties do we share personal
           information? We may share information in specific situations and with
           specific third parties.{' '}
@@ -188,7 +190,7 @@ export function Privacy() {
             Click here to learn more.
           </a>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           How do we keep your information safe? We have organizational and
           technical processes and procedures in place to protect your personal
           information. However, no electronic transmission over the internet or
@@ -204,7 +206,7 @@ export function Privacy() {
             Click here to learn more.
           </a>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           What are your rights? Depending on where you are located
           geographically, the applicable privacy law may mean you have certain
           rights regarding your personal information.{' '}
@@ -216,7 +218,7 @@ export function Privacy() {
             Click here to learn more.
           </a>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           How do you exercise your rights? The easiest way to exercise your
           rights is by filling out our data subject request form available{' '}
           <a
@@ -230,7 +232,7 @@ export function Privacy() {
           , or by contacting us. We will consider and act upon any request in
           accordance with applicable data protection laws.
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           Want to learn more about what Jason Ruesch does with any information
           we collect?{' '}
           <a
@@ -282,13 +284,13 @@ export function Privacy() {
             In Short: We collect personal information that you provide to us.
           </em>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           We collect personal information that you voluntarily provide to us
           when you express an interest in obtaining information about us or our
           products and Services, when you participate in activities on the
           Services, or otherwise when you contact us.
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           Personal Information Provided by You. The personal information that we
           collect depends on the context of your interactions with us and the
           Services, the choices you make, and the products and features you use.
@@ -305,15 +307,13 @@ export function Privacy() {
         >
           Sensitive Information
         </h3>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
-          We do not process sensitive information.
-        </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>We do not process sensitive information.</p>
+        <p>
           All personal information that you provide to us must be true,
           complete, and accurate, and you must notify us of any changes to such
           personal information.
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           Information collected when you use our Facebook application(s). We by
           default access your{' '}
           <a
@@ -356,7 +356,7 @@ export function Privacy() {
             information for other purposes with your consent.
           </em>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           We process your personal information for a variety of reasons,
           depending on how you interact with our Services, including:
         </p>
@@ -386,7 +386,7 @@ export function Privacy() {
             in this section and/or with the following third parties.
           </em>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           We may need to share your personal information in the following
           situations:
         </p>
@@ -414,7 +414,7 @@ export function Privacy() {
             otherwise required by law.
           </em>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           We will only keep your personal information for as long as it is
           necessary for the purposes set out in this privacy notice, unless a
           longer retention period is required or permitted by law (such as tax,
@@ -422,7 +422,7 @@ export function Privacy() {
           will require us keeping your personal information for longer than 90
           days .
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           When we have no ongoing legitimate business need to process your
           personal information, we will either delete or anonymize such
           information, or, if this is not possible (for example, because your
@@ -445,7 +445,7 @@ export function Privacy() {
             system of organizational and technical security measures.
           </em>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           We have implemented appropriate and reasonable technical and
           organizational security measures designed to protect the security of
           any personal information we process. However, despite our safeguards
@@ -474,7 +474,7 @@ export function Privacy() {
             children under 18 years of age.
           </em>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           We do not knowingly solicit data from or market to children under 18
           years of age. By using the Services, you represent that you are at
           least 18 or that you are the parent or guardian of such a minor and
@@ -500,7 +500,7 @@ export function Privacy() {
             time.
           </em>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           If you are located in the EEA or UK and you believe we are unlawfully
           processing your personal information, you also have the right to
           complain to your local data protection supervisory authority. You can
@@ -514,7 +514,7 @@ export function Privacy() {
             https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm.
           </a>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           If you are located in Switzerland, the contact details for the data
           protection authorities are available here:{' '}
           <a
@@ -547,13 +547,13 @@ export function Privacy() {
             below.
           </u>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           However, please note that this will not affect the lawfulness of the
           processing before its withdrawal, nor when applicable law allows, will
           it affect the processing of your personal information conducted in
           reliance on lawful processing grounds other than consent.
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           If you have questions or comments about your privacy rights, you may
           email us at privacy@jasonruesch.dev.
         </p>
@@ -566,7 +566,7 @@ export function Privacy() {
         <h2 className="text-xl font-medium sm:text-3xl">
           8. CONTROLS FOR DO-NOT-TRACK FEATURES
         </h2>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           Most web browsers and some mobile operating systems and mobile
           applications include a Do-Not-Track (&quot;DNT&quot;) feature or
           setting you can activate to signal your privacy preference not to have
@@ -594,7 +594,7 @@ export function Privacy() {
             specific rights regarding access to your personal information.
           </em>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           California Civil Code Section 1798.83, also known as the &quot;Shine
           The Light&quot; law, permits our users who are California residents to
           request and obtain from us, once a year and free of charge,
@@ -606,7 +606,7 @@ export function Privacy() {
           submit your request in writing to us using the contact information
           provided below.
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           If you are under 18 years of age, reside in California, and have a
           registered account with Services, you have the right to request
           removal of unwanted data that you publicly post on the Services. To
@@ -632,7 +632,7 @@ export function Privacy() {
             compliant with relevant laws.
           </em>
         </p>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           We may update this privacy notice from time to time. The updated
           version will be indicated by an updated &quot;Revised&quot; date and
           the updated version will be effective as soon as it is accessible. If
@@ -651,7 +651,7 @@ export function Privacy() {
         <h2 className="text-xl font-medium sm:text-3xl">
           11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
         </h2>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           If you have questions or comments about this notice, you may email us
           at privacy@jasonruesch.dev.
         </p>
@@ -665,7 +665,7 @@ export function Privacy() {
           12. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM
           YOU?
         </h2>
-        <p className="text-neutral-500 sm:text-xl lg:text-2xl dark:text-neutral-400">
+        <p>
           Based on the applicable laws of your country, you may have the right
           to request access to the personal information we collect from you,
           change that information, or delete it. To request to review, update,

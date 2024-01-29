@@ -4,25 +4,19 @@ export function Home() {
       <h1 className="gradient-heading">
         <div className="flex items-center justify-center">
           I'm&nbsp;
-          <span className="text-4xl !leading-cap sm:text-7xl lg:text-8xl">
-            Jason Ruesch
-          </span>
+          <span className="heading-lg">Jason Ruesch</span>
         </div>
         <div className="flex items-center justify-center">
           a&nbsp;
-          <span className="text-4xl !leading-cap sm:text-7xl lg:text-8xl">
-            Senior&nbsp;
-          </span>
+          <span className="heading-lg">Senior&nbsp;</span>
           Frontend
         </div>
         <div className="flex items-center justify-center">
           Software&nbsp;
-          <span className="text-4xl !leading-cap sm:text-7xl lg:text-8xl">
-            Engineer
-          </span>
+          <span className="heading-lg">Engineer</span>
         </div>
       </h1>
-      <p className="max-w-lg text-center text-neutral-500 sm:max-w-screen-sm sm:text-xl lg:max-w-screen-lg lg:text-2xl dark:text-neutral-400">
+      <p className="max-w-lg text-center sm:max-w-screen-sm lg:max-w-screen-lg">
         This is where I share my passion for creating exceptional user
         experiences through web development. Whether you're here for code,
         collaboration, or just to connect, I'm thrilled to have you.

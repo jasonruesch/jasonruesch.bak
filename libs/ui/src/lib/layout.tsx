@@ -33,7 +33,7 @@ export function Layout() {
         )}
       >
         <div className="flex-1">
-          <Link to="/" aria-hidden="true">
+          <Link to="/" aria-hidden="true" className="inline-block">
             <Logo className="h-8 w-8" />
           </Link>
         </div>

@@ -4,7 +4,9 @@ import plugin from 'tailwindcss/plugin';
 import { createThemes } from 'tw-colors';
 import colors from '../base/colors';
 import headings from '../base/headings';
+import paragraphs from '../base/paragraphs';
 import buttons from '../components/buttons';
+import gradientHeading from '../components/gradient-heading';
 import grid from '../components/grid';
 
 export const tailwindPreset = {
@@ -84,16 +86,11 @@ export const tailwindPreset = {
     ),
     plugin(({ addBase, addComponents }) => {
       addBase(headings);
+      addBase(paragraphs);
 
       addComponents(grid);
       addComponents(buttons);
-
-      addComponents({
-        '.gradient-heading': {
-          '@apply py-4 text-center text-xl font-normal uppercase !leading-cap sm:text-5xl lg:max-w-screen-lg lg:text-6xl bg-gradient-500 sm:bg-gradient-500-sm dark:bg-gradient-400 dark:sm:bg-gradient-400-sm bg-300% animate-gradient bg-clip-text text-transparent scale-110 sm:scale-100 motion-reduce:animate-none':
-            '',
-        },
-      });
+      addComponents(gradientHeading);
     }),
   ],
 } satisfies Omit<Config, 'content'>;
