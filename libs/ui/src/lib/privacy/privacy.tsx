@@ -681,6 +681,7 @@ export function Privacy() {
           </a>
         </p>
       </section>
+      <p>Testing release process...</p>
     </div>
   );
 }
