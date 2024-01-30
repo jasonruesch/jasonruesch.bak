@@ -67,7 +67,9 @@ jobs:
           npx nx affected -t build --parallel=3 --skip-nx-cache
 
       - name: Version
-        run: npx nx affected -t version --parallel=1
+        run: |
+          npx nx affected -t version --parallel=1
+          git push --follow-tags
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
