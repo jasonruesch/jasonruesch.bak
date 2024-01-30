@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.1](https://github.com/jasonruesch/jasonruesch/compare/jasonruesch-v0.7.0...jasonruesch-v0.7.1) (2024-01-30)
+
 ## [0.7.0](https://github.com/jasonruesch/jasonruesch/compare/jasonruesch-v0.6.1...jasonruesch-v0.7.0) (2024-01-30)
 
 
