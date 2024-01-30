@@ -31,6 +31,13 @@
           "mode": "production"
         }
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "angular",
+        "tagPrefix": "tailwind-v"
+      }
     }
   }
 }
