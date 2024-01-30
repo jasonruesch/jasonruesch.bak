@@ -27,7 +27,7 @@ export const tailwindPreset = {
           '0%': {
             backgroundPosition: '85% 85%',
           },
-          '25%': {
+          '20%': {
             backgroundPosition: '85% 85%',
           },
           '100%': {
@@ -36,7 +36,7 @@ export const tailwindPreset = {
         },
       },
       animation: {
-        gradient: 'gradient 12s linear infinite',
+        gradient: 'gradient 10s linear infinite',
       },
       backgroundSize: {
         '300%': '300% 300%',
