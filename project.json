@@ -73,7 +73,15 @@
       "dependsOn": ["build"],
       "options": {
         "preset": "conventional",
-        "tagPrefix": "jasonruesch-v"
+        "tagPrefix": "jasonruesch-v",
+        "postTargets": ["github"]
+      }
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "{tag}",
+        "notes": "{notes}"
       }
     }
   },

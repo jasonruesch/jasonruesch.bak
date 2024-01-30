@@ -37,7 +37,19 @@
       "dependsOn": ["build"],
       "options": {
         "preset": "conventional",
-        "tagPrefix": "tailwind-v"
+        "tagPrefix": "tailwind-v",
+        "postTargets": ["npm"]
+      }
+    },
+    "npm": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npm publish",
+            "cwd": "dist/libs/tailwind"
+          }
+        ]
       }
     }
   }
