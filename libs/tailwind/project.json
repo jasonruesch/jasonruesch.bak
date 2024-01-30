@@ -34,6 +34,7 @@
     },
     "version": {
       "executor": "@jscutlery/semver:version",
+      "dependsOn": ["build"],
       "options": {
         "preset": "conventional",
         "tagPrefix": "tailwind-v"
