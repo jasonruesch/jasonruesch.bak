@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.0](https://github.com/jasonruesch/jasonruesch/compare/jasonruesch-v0.7.1...jasonruesch-v0.8.0) (2024-01-30)
+
+
+### Features
+
+* **jasonruesch:** add an easter egg ([54db822](https://github.com/jasonruesch/jasonruesch/commit/54db82218f5ccead04fcc0025f8c979c2bc81b65))
+* **tailwind:** update gradient duration ([5193975](https://github.com/jasonruesch/jasonruesch/commit/5193975b8c04f279344bdfe0f59fe7b679dac289))
+
 ## [0.7.1](https://github.com/jasonruesch/jasonruesch/compare/jasonruesch-v0.7.0...jasonruesch-v0.7.1) (2024-01-30)
 
 ## [0.7.0](https://github.com/jasonruesch/jasonruesch/compare/jasonruesch-v0.6.1...jasonruesch-v0.7.0) (2024-01-30)
