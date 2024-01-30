@@ -681,6 +681,8 @@ export function Privacy() {
           </a>
         </p>
       </section>
+
+      <p className="hidden">Easter Egg!</p>
     </div>
   );
 }
