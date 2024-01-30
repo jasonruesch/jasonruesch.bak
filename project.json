@@ -71,7 +71,7 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "preset": "angular",
+        "preset": "conventional",
         "tagPrefix": "jasonruesch-v"
       }
     }
