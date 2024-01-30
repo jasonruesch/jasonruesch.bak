@@ -67,6 +67,13 @@
       "options": {
         "lintFilePatterns": ["./src"]
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "angular",
+        "tagPrefix": "jasonruesch-v"
+      }
     }
   },
   "tags": []
