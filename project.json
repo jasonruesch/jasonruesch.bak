@@ -23,7 +23,6 @@
     },
     "serve": {
       "executor": "@nx/vite:dev-server",
-      "dependsOn": ["^build"],
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "jasonruesch:build"
@@ -66,6 +65,14 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["./src"]
+      }
+    },
+    "local-registry": {
+      "executor": "@nx/js:verdaccio",
+      "options": {
+        "port": 4873,
+        "config": ".verdaccio/config.yml",
+        "storage": "tmp/local-registry/storage"
       }
     }
   },

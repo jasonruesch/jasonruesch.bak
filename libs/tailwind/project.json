@@ -31,6 +31,14 @@
           "mode": "production"
         }
       }
+    },
+    "publish-package": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build"],
+      "options": {
+        "command": "npm publish",
+        "cwd": "dist/libs/tailwind"
+      }
     }
   }
 }

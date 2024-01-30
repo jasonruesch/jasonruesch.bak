@@ -26,6 +26,8 @@ jobs:
         with:
           node-version: '20'
           cache: npm
+          always-auth: true
+          registry-url: https://npm.pkg.github.com/
       - uses: actions/cache@v4
         with:
           path: ~/.npm
@@ -33,11 +35,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-
       - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: nrwl/nx-set-shas@v3
       # This line is needed for nx affected to work when CI is running on a PR
       - run: git branch --track main origin/main
 
-      # This line is needed for nx format:check to check the correct files
-      - run: npx nx build tailwind
       - run: npx nx-cloud record -- nx format:check
       - run: npx nx affected -t lint,test,build --parallel=3
