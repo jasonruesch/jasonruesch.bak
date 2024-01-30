@@ -11,7 +11,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
-    "@jasonruesch/tailwind": "file:dist/libs/tailwind",
+    "@jasonruesch/tailwind": "^0.3.0",
     "@nx/cypress": "17.2.8",
     "@nx/devkit": "17.2.8",
     "@nx/eslint": "17.2.8",
@@ -57,6 +57,7 @@
     "tailwindcss-safe-area": "^0.4.1",
     "tw-colors": "^3.3.1",
     "typescript": "^5.3.3",
+    "verdaccio": "^5.0.4",
     "vite": "^5.0.0",
     "vite-plugin-dts": "~2.3.0",
     "vitest": "~0.34.6"
