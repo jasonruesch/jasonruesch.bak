@@ -78,6 +78,10 @@
       "options": {
         "command": "nx run e2e:e2e"
       }
+    },
+    "docker-build": {
+      "dependsOn": ["build"],
+      "command": "docker build -f Dockerfile.prod . -t jasonruesch"
     }
   },
   "tags": []

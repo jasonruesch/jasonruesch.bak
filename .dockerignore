@@ -1,9 +1,12 @@
 .git
+.github
 .nx
 .vscode
+coverage
 dist
 e2e
 node_modules
+tmp
 .dockerignore
 .gitignore
 Dockerfile

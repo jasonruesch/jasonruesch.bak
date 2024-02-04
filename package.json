@@ -18,6 +18,7 @@
     "@nx/eslint": "17.1.1",
     "@nx/eslint-plugin": "17.1.1",
     "@nx/js": "17.1.1",
+    "@nx/node": "17.1.1",
     "@nx/react": "17.1.1",
     "@nx/vite": "17.1.1",
     "@nx/workspace": "17.1.1",
