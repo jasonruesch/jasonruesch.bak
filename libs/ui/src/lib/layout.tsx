@@ -57,15 +57,16 @@ export function Layout() {
         <span className="text-center text-neutral-400 dark:text-neutral-300">
           &copy; {new Date().getFullYear()} Jason Ruesch. All rights reserved.
         </span>
-        <span className="text-neutral-400 dark:text-neutral-300">
-          v{packageVersion}.
-        </span>
         <Link
           to="/privacy"
           className="text-primary-500 hover:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500"
         >
           Privacy Policy
         </Link>
+        <span className="text-neutral-400 dark:text-neutral-300">&bull;</span>
+        <span className="text-neutral-400 dark:text-neutral-300">
+          v{packageVersion}
+        </span>
       </footer>
     </div>
   );
