@@ -1,6 +1,6 @@
 # This workflow will build and deploy a site to another repo when a tag is pushed
 
-name: Deploy site to Production
+name: Deploy to Production
 
 on:
   release:
@@ -39,7 +39,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npx nx build
+        run: npx nx build jasonruesch
 
       - uses: actions/upload-artifact@v4
         with:
