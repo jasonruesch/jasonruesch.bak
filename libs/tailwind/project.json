@@ -14,9 +14,12 @@
         "assets": ["libs/tailwind/*.md"]
       }
     },
-    "publish": {
-      "command": "node tools/scripts/publish.mjs tailwind {args.ver} {args.tag}",
-      "dependsOn": ["build"]
+    "nx-release-publish": {
+      "executor": "@nx/js:release-publish",
+      "options": {
+        "packageRoot": "./dist/libs/tailwind",
+        "registry": "https://npm.pkg.github.com/"
+      }
     }
   },
   "tags": ["scope:tailwind", "type:ui", "publishable"]
