@@ -2,6 +2,7 @@
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
+import packageJson from './package.json';
 
 export default defineConfig({
   root: __dirname,
@@ -47,5 +48,9 @@ export default defineConfig({
     },
 
     passWithNoTests: true,
+  },
+
+  define: {
+    'import.meta.env.PACKAGE_VERSION': JSON.stringify(packageJson.version),
   },
 });

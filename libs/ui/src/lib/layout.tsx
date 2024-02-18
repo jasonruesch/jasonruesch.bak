@@ -8,6 +8,8 @@ import Home from './home/home';
 import Privacy from './privacy/privacy';
 
 export function Layout() {
+  const packageVersion = import.meta.env.PACKAGE_VERSION;
+
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.scrollY;
@@ -54,6 +56,9 @@ export function Layout() {
       <footer className="flex flex-col items-center justify-center gap-1 py-4 px-safe-offset-4 sm:flex-row lg:px-safe-offset-8 text-sm">
         <span className="text-center text-neutral-400 dark:text-neutral-300">
           &copy; {new Date().getFullYear()} Jason Ruesch. All rights reserved.
+        </span>
+        <span className="text-neutral-400 dark:text-neutral-300">
+          v{packageVersion}.
         </span>
         <Link
           to="/privacy"
