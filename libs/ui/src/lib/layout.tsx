@@ -40,6 +40,7 @@ export function Layout() {
 
         <Nav className="flex-1" />
       </header>
+
       <main className="mt-14 flex flex-1 flex-col py-4 px-safe-offset-4 lg:mt-16 lg:px-safe-offset-8">
         <Routes>
           <Route index element={<Home />} />
@@ -49,6 +50,7 @@ export function Layout() {
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
+
       <footer className="flex flex-col items-center justify-center gap-1 py-4 px-safe-offset-4 sm:flex-row lg:px-safe-offset-8 text-sm">
         <span className="text-center text-neutral-400 dark:text-neutral-300">
           &copy; {new Date().getFullYear()} Jason Ruesch. All rights reserved.
