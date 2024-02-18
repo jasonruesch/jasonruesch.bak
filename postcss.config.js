@@ -1,3 +1,8 @@
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 // Note: If you use library-specific PostCSS/Tailwind configuration then you should remove the `postcssConfig` build
 // option from your application's configuration (i.e. project.json).
 //
@@ -6,7 +11,7 @@
 export default {
   plugins: {
     tailwindcss: {
-      config: './tailwind.config.ts',
+      config: join(__dirname, './tailwind.config.ts'),
     },
     autoprefixer: {},
   },

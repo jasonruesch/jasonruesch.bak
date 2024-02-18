@@ -53,9 +53,17 @@
       },
       "library": {
         "style": "css",
-        "linter": "eslint"
+        "linter": "eslint",
+        "unitTestRunner": "none"
       }
     }
   },
-  "nxCloudAccessToken": "N2JlM2UwNjAtYTdhNC00MWM3LTg4ZDUtMjdkMGZlODNmNmQxfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "N2JlM2UwNjAtYTdhNC00MWM3LTg4ZDUtMjdkMGZlODNmNmQxfHJlYWQtd3JpdGU=",
+  "targetDefaults": {
+    "@nx/vite:build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  }
 }
