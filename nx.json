@@ -72,6 +72,12 @@
       "projectChangelogs": true,
       "automaticFromRef": true
     },
+    "version": {
+      "conventionalCommits": true,
+      "generatorOptions": {
+        "fallbackCurrentVersionResolver": "disk"
+      }
+    },
     "groups": {
       "apps": {
         "projects": "tag:type:app",
@@ -82,9 +88,6 @@
           "renderOptions": {
             "authors": false
           }
-        },
-        "version": {
-          "conventionalCommits": true
         }
       },
       "publishable": {
@@ -93,12 +96,6 @@
         "changelog": {
           "renderOptions": {
             "commitRefefences": false
-          }
-        },
-        "version": {
-          "conventionalCommits": true,
-          "generatorOptions": {
-            "fallbackCurrentVersionResolver": "disk"
           }
         }
       }
