@@ -65,5 +65,40 @@
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
     }
+  },
+  "release": {
+    "changelog": {
+      "workspaceChangelog": false,
+      "projectChangelogs": true,
+      "automaticFromRef": true
+    },
+    "groups": {
+      "apps": {
+        "projects": "tag:type:app",
+        "projectsRelationship": "independent",
+        "changelog": {
+          "createRelease": "github",
+          "file": "{projectRoot}/CHANGELOG.md",
+          "renderOptions": {
+            "authors": false
+          }
+        },
+        "version": {
+          "conventionalCommits": true
+        }
+      },
+      "publishable": {
+        "projects": ["tag:publishable"],
+        "projectsRelationship": "independent",
+        "changelog": {
+          "renderOptions": {
+            "commitRefefences": false
+          }
+        },
+        "version": {
+          "conventionalCommits": true
+        }
+      }
+    }
   }
 }

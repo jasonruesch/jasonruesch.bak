@@ -19,5 +19,5 @@
       "dependsOn": ["build"]
     }
   },
-  "tags": ["scope:tailwind", "type:ui"]
+  "tags": ["scope:tailwind", "type:ui", "publishable"]
 }

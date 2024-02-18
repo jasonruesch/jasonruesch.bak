@@ -1,6 +1,6 @@
 {
   "name": "@jasonruesch/tailwind",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "type": "module",
   "dependencies": {
     "tailwindcss": "^3.4.1",
@@ -9,5 +9,10 @@
     "tw-colors": "^3.3.1"
   },
   "main": "./index.ts",
-  "module": "./index.ts"
+  "module": "./index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonruesch/jasonruesch.git",
+    "directory": "libs/tailwind"
+  }
 }
